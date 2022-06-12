@@ -1,0 +1,23 @@
+//Setup
+@import 'mixins.scss';
+@import 'variables.scss';
+
+//Fonts
+@import './font/industry.scss';
+
+//Components
+@import './components/header.scss';
+
+//Pages
+@import './pages/homepage.scss';
+
+
+//Basic
+
+body {
+    font-family: "industry", sans-serif;
+}
+img, iframe {
+    max-width: 100%;
+}
+
