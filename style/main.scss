@@ -6,7 +6,11 @@
 @import './font/industry.scss';
 
 //Components
+@import "./components/footer.scss";
 @import './components/header.scss';
+@import "./components/scroll.scss";
+@import "./components/btn.scss";
+
 
 //Pages
 @import './pages/homepage.scss';
@@ -16,6 +20,7 @@
 
 body {
     font-family: "industry", sans-serif;
+    padding-top: 82px;
 }
 img, iframe {
     max-width: 100%;
