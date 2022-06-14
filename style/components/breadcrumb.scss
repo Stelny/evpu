@@ -1,0 +1,22 @@
+.breadcrumb-custom {
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            color: #141712;
+            font-size: 0.938rem;
+            opacity: 0.25;
+            margin-right: 0.25rem;
+
+            &:not(&:last-child)::after {
+                content: '/';
+            }
+            a {
+                font-size: 0.938rem;
+                color: #141712;                
+            }
+        }
+    }
+}

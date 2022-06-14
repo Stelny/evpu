@@ -4,12 +4,15 @@
 
 //Fonts
 @import './font/industry.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 //Components
 @import "./components/footer.scss";
 @import './components/header.scss';
 @import "./components/scroll.scss";
 @import "./components/btn.scss";
+@import "./components/stripe.scss";
+@import "./components/breadcrumb.scss";
 
 
 //Pages
@@ -20,7 +23,7 @@
 
 body {
     font-family: "industry", sans-serif;
-    padding-top: 82px;
+    padding-top: 80px;
 }
 img, iframe {
     max-width: 100%;
