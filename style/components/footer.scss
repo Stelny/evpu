@@ -1,7 +1,10 @@
 .footer {
+    
     background: #F0F0F0;
     padding: 4rem 0;
     padding-bottom: 2rem;
+    position: relative;
+    z-index: 50;
     &-socials {
         display: flex;
         flex-wrap: wrap;
@@ -96,5 +99,24 @@
             text-align: center;
         }
 
+    }
+}
+
+.dark-product {
+    display: none;
+}
+
+body.defence {
+    .footer {
+        background: #242622;
+        ul li a, p, h3, .socials a, &-copyright {
+            color: white;
+        }
+    }
+    .white-product {
+        display: none;
+    }
+    .dark-product {
+        display: block;
     }
 }

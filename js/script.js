@@ -4,17 +4,20 @@ const factsNumItem = "facts-item-num";
 const factsRect = "facts-rectangles";
 const factsRectItem = "facts-item-rect";
 
-const headerMenuClass = "header-menu";
-const toggleHeaderClass = "toggle-header";
+const headerMenuId = "header-menu";
+const toggleHeaderId = "toggle-header";
 
-const searchHeaderContentClass = "search-header-content";
-const searchHeaderClass = "search-header";
+const searchHeaderContentId = "search-header-content";
+const searchHeaderId = "search-header";
 
-const factTopClass = 'fact-top';
-const qFactsClass = 'q-facts';
+const factTopId = 'fact-top';
+const qFactsId = 'q-facts';
 
-const defenceClass = 'defence';
-const securityClass = 'security';
+const defenceId = 'defence';
+const securityId = 'security';
+
+const whiteRightId = 'white-right';
+const blackLeftId = 'black-left';
 
 const body = document.querySelector('body');
 
@@ -45,29 +48,34 @@ function changeStyleOfText(it) {
 }
 
 $(document).ready(function(){
-    document.addEventListener('scroll', function(){ 
-        scrollListenerNumber(factsNum, factsNumItem)
-        scrollListenerNumber(factsRect, factsRectItem)
-    })
+    if (document.getElementById(factsNum)) {
+        document.addEventListener('scroll', function(){ 
+            scrollListenerNumber(factsNum, factsNumItem)
+            scrollListenerNumber(factsRect, factsRectItem)
+        })
+    }
 
-    const headerMenu = document.getElementById(headerMenuClass);
-    const toggleHeader = document.getElementById(toggleHeaderClass);
+    const headerMenu = document.getElementById(headerMenuId);
+    const toggleHeader = document.getElementById(toggleHeaderId);
 
-    toggleHeader.addEventListener('click', function() {
+    if (toggleHeader) {
+        toggleHeader.addEventListener('click', function() {
 
-        if (headerMenu.classList.contains('active')) {
-            headerMenu.classList.remove('active');
-            headerMenu.classList.remove('border-t')
-            return;
-        }
-        headerMenu.classList.add('active');
-        setTimeout(() => {
-            headerMenu.classList.add('border-t')
-        }, [1000])
-    })
+            if (headerMenu.classList.contains('active')) {
+                headerMenu.classList.remove('active');
+                headerMenu.classList.remove('border-t')
+                return;
+            }
+            headerMenu.classList.add('active');
+            setTimeout(() => {
+                headerMenu.classList.add('border-t')
+            }, [1000])
+        })
+    }
 
-    const searchHeader = document.getElementById(searchHeaderClass);
-    const searchHeaderContent = document.getElementById(searchHeaderContentClass);
+
+    const searchHeader = document.getElementById(searchHeaderId);
+    const searchHeaderContent = document.getElementById(searchHeaderContentId);
 
     searchHeader.addEventListener('click', function(e) {
         if (searchHeader.classList.contains('clicked')) return;
@@ -77,66 +85,71 @@ $(document).ready(function(){
         searchHeaderContent.classList.add('active');
     })
 
-    const factTop = document.getElementById(factTopClass); 
-    const qFacts = document.getElementById(qFactsClass);
+    const factTop = document.getElementById(factTopId); 
+    const qFacts = document.getElementById(qFactsId);
+    if (factTop) {
+        factTop.addEventListener('click', function() {
+            qFacts.scrollIntoView({behavior: "smooth"});
+        })
+    }
 
-    factTop.addEventListener('click', function() {
-        qFacts.scrollIntoView({behavior: "smooth"});
-    })
+    const defence = document.getElementById(defenceId);
+    const security = document.getElementById(securityId);
 
-    const defence = document.getElementById(defenceClass);
-    const security = document.getElementById(securityClass);
+    if (defence) {
+        defence.addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            defence.classList.add('open');
+            security.classList.add('close');
+    
+            body.classList.add('defence');
+    
+            setTimeout(() => {
+                window.location.href = defence.href;
+            }, [1500])
+        })
+    
+    }
+    if (security) {
+        security.addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            security.classList.add('open');
+            defence.classList.add('close');
+    
+    
+            setTimeout(() => {
+                window.location.href = defence.href;
+            }, [1500])
+        })
+    }
 
-    defence.addEventListener('click', function(e) {
-        e.preventDefault();
+    const whiteRight = document.getElementById(whiteRightId);
+    const blackLeft = document.getElementById(blackLeftId);
 
-        defence.classList.add('open');
-        security.classList.add('close');
+    if (whiteRight) {
+        whiteRight.addEventListener('click', function(e) {
+            e.preventDefault();
 
-        body.classList.add('defence');
+            whiteRight.classList.add('open');
 
-        setTimeout(() => {
-            window.location.href = defence.href;
-        }, [1500])
-    })
+            setTimeout(() => {
+                window.location.href = whiteRight.href;
+            }, [1000])
+        })
+    }
 
-    security.addEventListener('click', function(e) {
-        e.preventDefault();
+    if (blackLeft) {
+        blackLeft.addEventListener('click', function(e) {
+            e.preventDefault();
 
-        security.classList.add('open');
-        defence.classList.add('close');
+            blackLeft.classList.add('open');
 
+            setTimeout(() => {
+                window.location.href = blackLeft.href;
+            }, [1000])
+        })
+    }
 
-        setTimeout(() => {
-            window.location.href = defence.href;
-        }, [1500])
-    })
-
-    /*gsap.registerPlugin(ScrollTrigger);
-
-    ScrollTrigger.defaults({
-        toggleActions: "restart pause resume pause",
-        scroller: ".scroller"
-    });
-
-    gsap.to("#q-facts", {
-        scrollTrigger: "#q-facts", 
-        duration: 2, 
-    });
-
-    gsap.to("#work", {
-    scrollTrigger: {
-        trigger: "#work",
-        toggleActions: "restart pause reverse pause"
-    }, 
-    duration: 1, 
-    });
-
-    gsap.to("#touch", {
-    scrollTrigger: "#touch", 
-    scale: 2, 
-    repeat: -1, 
-    yoyo: true, 
-    ease: "power2"
-    });*/
 })

@@ -17,6 +17,7 @@
 
 //Pages
 @import './pages/homepage.scss';
+@import './pages/product.scss';
 
 
 //Basic
@@ -27,4 +28,7 @@ body {
 }
 img, iframe {
     max-width: 100%;
+}
+.container-fluid, .container {
+    padding: 0 100px;
 }
