@@ -1,102 +1,228 @@
-#black-left {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: #141712;
-    height: 100%;
-    width: 80px;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    transition: 1s width ease-in-out;
-
-    &.open {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-    &:hover {
-        text-decoration: none;
-    }
-
-    &-content {
-        font-weight: 500;
-        font-size: 1.563rem;
-        color: white;
-        transform: rotate(270deg);
-        &::after {
-            content: url(../icons/arrow.svg);
-            width: 9px;
-            height: 17px;
-            transform: rotate(270deg) translateX(-50%);
-            position: absolute;
-            top: 30px;
-            left: 45%;
-        }
-    }
-}
-
-#white-right {
-    position: fixed;
-    right: 0;
-    top: 0;
-    background: white;
-    height: 100%;
-    width: 80px;
-    z-index: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    &:hover {
-        text-decoration: none;
-    }
-    transition: 1s width ease-in-out;
-
-    &.open {
-        width: 100%;
-        justify-content: flex-start;
-        z-index: 999;
-    }
-
-    &-content {
-        font-size: 1.563rem;
-        color: #141712;
-        transform: rotate(90deg);
-        font-weight: 500;
-        position: relative;
-        
-        &::after {
-            content: url(../icons/arrow-black.svg);
-            width: 9px;
-            height: 17px;
-            transform: rotate(270deg) translateX(-50%);
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            display: none;
-        }
-    }
-}
-
-body.defence {
+@media screen and (min-width: 991px) { 
     #black-left {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #141712;
+        height: 100%;
+        width: 80px;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        transition: 1s width ease-in-out;
+
+        &.open {
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
 
         &-content {
+            font-weight: 500;
+            font-size: 1.563rem;
+            color: white;
+            transform: rotate(270deg);
             &::after {
-                display: none;
+                content: url(../icons/arrow.svg);
+                width: 9px;
+                height: 17px;
+                transform: rotate(270deg) translateX(-50%);
+                position: absolute;
+                top: 30px;
+                left: 45%;
             }
         }
     }
     #white-right {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: white;
+        height: 100%;
+        width: 80px;
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+        transition: 1s width ease-in-out;
+
+        &.open {
+            width: 100%;
+            justify-content: flex-start;
+            z-index: 999;
+        }
+
         &-content {
+            font-size: 1.563rem;
+            color: #141712;
+            transform: rotate(90deg);
+            font-weight: 500;
+            position: relative;
+            
             &::after {
-                display: flex;
+                content: url(../icons/arrow-black.svg);
+                width: 9px;
+                height: 17px;
+                transform: rotate(270deg) translateX(-50%);
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                display: none;
             }
+        }
+    }
+
+    body.defence {
+        #black-left {
+
+            &-content {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        #white-right {
+            &-content {
+                &::after {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {  
+    #black-left {
+        width: 100%;
+        background: #141712;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+        position: fixed;
+        top: 80px;
+        z-index: 50;
+        transition: 1s all ease-in-out;
+        max-height: 56px;
+        height: 100%;
+        align-items: first baseline;
+
+        &::after {
+            content: 'DEFENCE';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.25rem;
+            opacity: 0;
+        }
+
+        &.open {
+            background: url(../images/defence-animation.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            max-height: 100%;
+            &::after { 
+                opacity: 1;
+            }
+        }
+        &-content { 
+            background: #141712;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            position: relative;
+            &::after {
+                content: url(../icons/arrow.svg);
+                width: 9px;
+                height: 17px;
+                transform: rotate(270deg);
+               
+            }
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    #white-right {
+        width: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #141712;
+        font-weight: 600;
+        display: none;
+        position: fixed;
+        top: 80px;
+        z-index: 50;
+        transition: 1s all ease-in-out;
+        max-height: 56px;
+        height: 100%;
+
+        &::after {
+            content: 'SECURITY';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.25rem;
+            opacity: 0;
+        }
+
+        &.open {
+            background: url(../images/security-animation.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            max-height: 100%;
+            &::after { 
+                opacity: 1;
+            }
+        }
+
+        &-content { 
+            background: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            &::after {
+                content: url(../icons/arrow-black.svg);
+                width: 9px;
+                height: 17px;
+                transform: rotate(270deg);
+               
+            }
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    body.defence {
+        #black-left {
+            display: none;
+        }
+        #white-right {
+            display: block;
         }
     }
 }

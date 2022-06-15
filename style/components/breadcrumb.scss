@@ -49,3 +49,28 @@ body.defence {
         }
     }
 }
+.product-single {
+    &-bg { 
+        .breadcrumb-custom, .container {
+            background: transparent;
+            ul {
+                background: transparent;
+                li {
+                    opacity: 1;
+                    color: #91969F;
+                    &::after {
+                        color: #91969F;
+                    }
+                    a  {
+                        color: #91969F;
+                    }
+                    &:last-child {
+                        a {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
