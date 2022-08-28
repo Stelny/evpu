@@ -10,26 +10,13 @@
         flex-direction: column;
     }
 
-    h2 {
-        font-size: 6.25rem;
-        font-weight: bold;
-        z-index: 50;
-        position: relative;
-        @media screen and (max-width: 1200px) { 
-            font-size: 4rem;
-        }
-        span {
-            color: #21409A;
-        } 
-    }
-
     #defence {
         transition: 1s max-width ease-in-out;
 
         h2 {
             color: white;
             transition: .5s all ease-in-out;   
-
+            display: none;
         }
         &:hover h2 {
             color: #21409A;
@@ -50,9 +37,9 @@
         transition: 1s max-width ease-in-out;
 
         h2 {
-            color: #141712;
+            color: black;
             transition: .5s all ease-in-out;   
-
+            display: none;
         }
         &:hover h2 {
             color: #21409A;
@@ -80,15 +67,20 @@
         max-width: 50%;
         position: relative;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         z-index: 1;
         @media screen and (max-width: 776px) {
             max-width: 100%;
             height: 400px;
-
+            order: 2;
             h2 {
-                font-size: 2.25rem;
+                display: block!important;
+                font-size: 1.5rem;
+                color: white;
+                font-weight: 600;
+                z-index: 50;
+                margin-top: .75rem;
                 span {
                     color: white;
                 }
@@ -103,21 +95,22 @@
             background: url(../images/defence.png);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: left bottom;
+            background-position: right center;
             width: 100%;
             height: 100%;
             position: absolute;
             left: 0;
             top: 0;
             z-index: -1;
-            opacity: 0.1;
             transition: .5s all ease-in-out;   
             @media screen and (max-width: 776px) {
                 opacity: 1;
                 background: url(../images/defence-phone.png);
                 background-repeat: no-repeat;
                 background-size: cover;
-               
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
             }
         }
         &:hover::before {
@@ -134,10 +127,18 @@
         align-items: center;
         justify-content: center;
         @media screen and (max-width: 776px) {
+            order: 1;
             max-width: 100%;
             height: 400px;
+            align-items: flex-start;
+            
             h2 {
-                font-size: 2.25rem;
+                display: block!important;
+                font-size: 1.5rem;
+                color: black;
+                font-weight: 600;
+                z-index: 50;
+                margin-top: .75rem;
                 span {
                     color: black;
                 }
@@ -156,14 +157,16 @@
             position: absolute;
             left: 0;
             top: 0;
-            opacity: 0.1;
-            background-position: right bottom;
+            background-position: left center;
             transition: .5s all ease-in-out;   
             @media screen and (max-width: 776px) {
                 opacity: 1;
                 background: url(../images/security-phone.png);
                 background-repeat: no-repeat;
                 background-size: cover;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
             }
 
         }
@@ -173,7 +176,7 @@
     }
 }
 .main-gradient {
-    background: linear-gradient(#214ac2 0%, #1e3b8f 100%);
+    background: linear-gradient(#27348B 0%, #1e3b8f 100%);
 }
 @media screen and (max-width: 991px) {  
     #fact-top {
@@ -280,17 +283,7 @@
         @media screen and (max-width: 776px) { 
             grid-template-columns: 1fr 1fr;
         }
-        &.rect {
-            grid-template-columns: 1fr 1fr 1fr;
-            max-width: 600px;
-            margin: auto;
-            margin-top: 6rem;
-            @media screen and (max-width: 776px) { 
-                grid-template-columns: 1fr;
-                grid-gap: 5rem;
-
-            }
-        }
+        
 
     }
     &-item {
@@ -377,13 +370,14 @@
 }
 
 .news {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3rem 0;
     @media screen and (max-width: 1200px) {  
         height: unset;
+        min-height: unset;
     }
 
     &-heading {
@@ -405,9 +399,13 @@
     &-content {
         margin-top: 3rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 1rem;
         @media screen and (max-width: 991px) {  
+            grid-template-columns: repeat(2, 1fr);
+
+        } 
+        @media screen and (max-width: 576px) {  
             grid-template-columns: 1fr;
 
         } 
@@ -415,6 +413,7 @@
             height: 400px;
             position: relative;
             display: flex;
+            background: #F0F0F0;
             &-image {
                 background: #F0F0F0;
                 width: 100%;
@@ -433,10 +432,13 @@
                 position: absolute;
                 left: 2rem;
                 top: 2rem;
-                font-size: 2.5rem;
-                font-weight: 300;
+                font-size: 1.875rem;
+                font-weight: 500;
                 color: #21409A;
                 max-width: 450px;
+                @media screen and (max-width: 1400px) {   
+                    font-size: 1.5rem;
+                }
             }
             &-category {
                 position: absolute;

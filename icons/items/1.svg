@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="190.577" height="122.234" viewBox="0 0 190.577 122.234">
+  <g id="eos-icon" transform="translate(0.5 0.5)">
+    <path id="Vector" d="M0,0H63.437V63.437H0Z" transform="translate(0 22.248)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-2" data-name="Vector" d="M43.806,21.9A21.9,21.9,0,1,1,21.9,0a21.9,21.9,0,0,1,21.9,21.9Z" transform="translate(9.819 32.067)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-3" data-name="Vector" d="M26.434,13.217A13.217,13.217,0,1,1,13.217,0,13.217,13.217,0,0,1,26.434,13.217Z" transform="translate(18.505 40.753)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-4" data-name="Vector" d="M0,0H43.806V43.806H0Z" transform="translate(145.77 31.691)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-5" data-name="Vector" d="M0,0H82.327V24.925H0Z" transform="translate(145.866 66.152) rotate(180)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-6" data-name="Vector" d="M0,0H30.589V7.931H0Z" transform="translate(119.809 41.359) rotate(180)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-7" data-name="Vector" d="M0,0H52.114V33.233H0Z" transform="translate(130.761 33.233) rotate(180)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-8" data-name="Vector" d="M0,0H46.072V20.77H0Z" transform="translate(127.739 121.234) rotate(180)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-9" data-name="Vector" d="M0,33.988H46.072l-.759-1.511A74.136,74.136,0,0,1,38.142,0H8.308A70.926,70.926,0,0,1,1.133,31.719Z" transform="translate(81.572 66.433)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-10" data-name="Vector" d="M30.211,15.106A15.106,15.106,0,1,1,15.106,0,15.106,15.106,0,0,1,30.211,15.106Z" transform="translate(152.568 38.866)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Vector-11" data-name="Vector" d="M15.861,7.931A7.931,7.931,0,1,1,7.931,0a7.931,7.931,0,0,1,7.931,7.931Z" transform="translate(159.743 46.041)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group" transform="translate(87.614 9.031)">
+      <path id="Vector-12" data-name="Vector" d="M15.106,7.553A7.553,7.553,0,1,1,7.553,0,7.553,7.553,0,0,1,15.106,7.553Z" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Vector-13" data-name="Vector" d="M9.819,4.909A4.909,4.909,0,1,1,4.909,0,4.909,4.909,0,0,1,9.819,4.909Z" transform="translate(24.547 2.644)" fill="none" stroke="#141712" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -21,7 +21,22 @@ const blackLeftId = 'black-left';
 
 const body = document.querySelector('body');
 
+function openLeft () {
+    const blackLeft = document.getElementById(blackLeftId);
+    blackLeft.classList.add('open');
 
+    setTimeout(() => {
+        window.location.href = blackLeft.href;
+    }, [1000])
+}
+function openRight () {
+    const whiteRight = document.getElementById(whiteRightId);
+    whiteRight.classList.add('open');
+
+    setTimeout(() => {
+        window.location.href = whiteRight.href;
+    }, [1000])
+}
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -132,11 +147,7 @@ $(document).ready(function(){
         whiteRight.addEventListener('click', function(e) {
             e.preventDefault();
 
-            whiteRight.classList.add('open');
-
-            setTimeout(() => {
-                window.location.href = whiteRight.href;
-            }, [1000])
+            openRight();
         })
     }
 
@@ -144,12 +155,10 @@ $(document).ready(function(){
         blackLeft.addEventListener('click', function(e) {
             e.preventDefault();
 
-            blackLeft.classList.add('open');
-
-            setTimeout(() => {
-                window.location.href = blackLeft.href;
-            }, [1000])
+            openLeft();
         })
     }
 
+
 })
+

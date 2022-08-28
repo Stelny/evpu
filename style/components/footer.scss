@@ -1,116 +1,105 @@
 .footer {
     
-    background: #F0F0F0;
+    background: white;
     padding: 4rem 0;
     padding-bottom: 2rem;
     position: relative;
     z-index: 50;
-    &-socials {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        a {
-            display: flex;
-            margin-right: 1rem;
-            @media screen and (max-width: 776px) { 
-                margin: 0rem 1rem;
-            }
-        }
-    }
     &-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 2rem;
-        margin-bottom: 2rem;
-
-        @media screen and (max-width: 991px) {  
-            grid-template-columns: 1fr 1fr;
-        }
-        @media screen and (max-width: 776px) {  
-            grid-template-columns: 1fr;
-            grid-gap: 3rem;
-        }
-    }
-    &-item {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        @media screen and (max-width: 776px) {  
+        &-logo {
+            display: block;
+            margin-bottom: 2rem;
+        }
+        &-socials {
+            display: flex;
             align-items: center;
             justify-content: center;
-        }
-        img {
-            max-width: 270px;
-        }
-            
-        h3 {
-            font-weight: bold;
-            font-size: 1.25rem;
-            text-align: left;
-            color: #141712;
-            margin-bottom: 1rem;
-        }
-        ul {
-            padding: 0;
-            list-style: none;
-            margin: 0;
-            
-            
-            li {
-                @media screen and (max-width: 776px) {   
-                    text-align: center;
-                }
-                line-height: 1.75;
-                a {
-                    font-family: "Roboto";
-                    font-weight: 300;
-                    font-size: 1.25rem;
-                    text-align: left;
-                    color: #141712;
-                }
-            }
-        }
-        p {
-            font-family: "Roboto";
-            font-weight: 300;
-            font-size: 1.25rem;
-            text-align: left;
-            color: #141712;
-            line-height: 1.75;
-            @media screen and (max-width: 776px) {   
-                text-align: center;
-            }
-        }
-
-        &.start {
+            flex-direction: column;
+            margin-bottom: 3rem;
             p {
                 font-size: 0.938rem;
-                margin-top: 2rem;
+                color: #27348B;
+                margin-bottom: .5rem;
+            }
+            &-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                
+                a {
+                    display: flex;
+                    margin-right: 1rem;
+                    @media screen and (max-width: 776px) { 
+                        margin: 0rem 1rem;
+                    }
+                }
+            }
+            
+           
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 2rem;
+            @media screen and (max-width: 991px) {
+                flex-direction: column;
+            }
+            li {
+                margin: 0 2rem;
+                a {
+                    font-size: 0.938rem;
+                    text-transform: uppercase;
+                    color: #27348B;
+                }
             }
         }
-    }
-    &-copyright {
-        font-family: "Roboto";
-        font-weight: 300;
-        font-size: 15px;
-        text-align: left;
-        color: #141712;
-        opacity: 0.5;
-        @media screen and (max-width: 776px) {   
-            text-align: center;
+        &-copyright {
+            font-size: 0.938rem;
+            color: #27348B;
+            opacity: 0.5;
         }
-
     }
 }
 
 .dark-product {
     display: none;
 }
-
+.footer-content-logo-dark {
+    display: none;
+}
 body.defence {
     .footer {
-        background: #242622;
+        background: #141712;
         ul li a, p, h3, .socials a, &-copyright {
             color: white;
+        }
+        svg {
+            path {
+                fill: white;
+            }
+            #Path_22, #Path_23 {
+                fill: #141712;
+            }
+            
+            
+            
+        }
+        .footer-content-copyright {
+            color: white;
+        }
+        .footer-content-logo-dark {
+            display: block;
+            margin-bottom: 2rem;
+        }
+        .footer-content-logo {
+            display: none;
         }
     }
     .white-product {
@@ -119,4 +108,5 @@ body.defence {
     .dark-product {
         display: block;
     }
+    
 }
